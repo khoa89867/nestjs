@@ -16,7 +16,6 @@ exports.PostController = void 0;
 const common_1 = require("@nestjs/common");
 const post_dto_1 = require("../dto/post.dto");
 const post_service_1 = require("../services/post.service");
-const httpException_filter_1 = require("../../utils/httpException.filter");
 const passport_1 = require("@nestjs/passport");
 const post_repository_1 = require("../repositories/post.repository");
 const pagination_dto_1 = require("../dto/pagination.dto");
@@ -84,7 +83,7 @@ __decorate([
 ], PostController.prototype, "pagination", null);
 __decorate([
     (0, common_1.Get)(':id'),
-    (0, common_1.UseFilters)(httpException_filter_1.HttpExceptionFilter),
+    (0, common_1.UseFilters)(),
     __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),

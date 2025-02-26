@@ -15,8 +15,6 @@ import { PaginationDto } from '../dto/pagination.dto';
 import { getDownloadURL, getStorage, ref, uploadBytes } from "@firebase/storage";
 import { initializeApp } from "firebase/app";
 import config from '../config/uploadfirebase.config'
-import { UserRepository } from 'src/user/repositories/user.repository';
-
 @Injectable()
 export class PostService {
   constructor(

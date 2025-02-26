@@ -1,7 +1,6 @@
 import { Bind, Body, Controller, Delete, Get, Param, Post, Put, Query, Req, UploadedFile, UseFilters, UseGuards, UseInterceptors } from '@nestjs/common';
 import { CreatePostDto, UpdatePostDto } from '../dto/post.dto';
 import { PostService } from '../services/post.service';
-import { HttpExceptionFilter } from 'src/utils/httpException.filter';
 import { AuthGuard } from '@nestjs/passport';
 import { PostRepository } from '../repositories/post.repository';
 import { PaginationDto } from '../dto/pagination.dto';
@@ -28,8 +27,7 @@ export class PostController {
     } 
 
     @Get(':id')
-    @UseFilters(HttpExceptionFilter)
-    // @UseFilters(ExceptionLoggerFilter)
+    @UseFilters()
     getPostById(@Param('id') id: string) {
         return this.postService.getPostById(id);
     }
