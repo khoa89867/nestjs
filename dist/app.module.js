@@ -22,7 +22,7 @@ exports.AppModule = AppModule = __decorate([
         imports: [
             post_module_1.PostModule,
             config_1.ConfigModule.forRoot(),
-            mongoose_1.MongooseModule.forRoot('mongodb://admin:admin@localhost:27017/'),
+            mongoose_1.MongooseModule.forRoot('mongodb+srv://khoa89867:khoa89867@cluster0.92b1k.mongodb.net/'),
             user_module_1.UserModule,
         ],
         controllers: [app_controller_1.AppController,],

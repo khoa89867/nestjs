@@ -10,13 +10,17 @@ import { APP_FILTER } from '@nestjs/core';
   imports: [
     PostModule,
     ConfigModule.forRoot(),
-    MongooseModule.forRoot('mongodb://admin:admin@localhost:27017/'),
+    MongooseModule.forRoot('mongodb+srv://khoa89867:khoa89867@cluster0.92b1k.mongodb.net/'),
     UserModule,
     
   ],
   controllers: [AppController,],
   providers: [
     AppService,
+    // {
+    //   provide: APP_FILTER,
+    //   useClass: ExceptionLoggerFilter,
+    // }
   ],
 })
 export class AppModule {}
