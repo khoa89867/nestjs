@@ -10,7 +10,7 @@ import { APP_FILTER } from '@nestjs/core';
   imports: [
     PostModule,
     ConfigModule.forRoot(),
-    MongooseModule.forRoot('mongodb+srv://khoa89867:khoa89867@cluster0.92b1k.mongodb.net/'),
+    MongooseModule.forRoot(process.env.MONGODB_URL),
     UserModule,
     
   ],
